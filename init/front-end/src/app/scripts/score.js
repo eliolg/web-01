@@ -3,7 +3,7 @@ import {parseUrl} from "./utils"
 import template from "../views/score.html";
 import { Component } from "./component";
 
-var params = parseUrl();
+
 // TODO #export-functions: remove the IIFE
 
   // TODO #export-functions: export function ScoreComponent
@@ -13,6 +13,7 @@ var params = parseUrl();
 
     constructor(){
       super(template);
+      const params = parseUrl();
       this.name = params.name;
       this.size = parseInt(params.size);
       this.time = parseInt(params.time);
